@@ -22,8 +22,12 @@ supports 'ubuntu'
 
 suggests 'pkgutil' # Solaris 2
 
-attribute 'build-essential/compile_time',
-  display_name: 'Build Essential Compile Time Execution',
-  description: 'Execute resources at compile time.',
-  default: false,
-  recipes: ['build-essential::default']
+# draistrick - removed attrs from
+#https://github.com/opscode-cookbooks/build-essential/commit/1d9cc85833257717eb3cb6a1e26e537bd6642f94?diff=split
+#because the default: false breaks 11.6.0
+#
+#attribute 'build-essential/compile_time',
+#  display_name: 'Build Essential Compile Time Execution',
+#  description: 'Execute resources at compile time.',
+#  default: false,
+#  recipes: ['build-essential::default']
